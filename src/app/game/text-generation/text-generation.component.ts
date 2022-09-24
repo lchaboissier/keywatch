@@ -17,7 +17,7 @@ export class TextGenerationComponent implements OnInit {
     this.promise.getData().then(value => {
       this.paragraph = value;
       console.log(this.paragraph);
-      this.loading = false;
+      this.loading = false; 
     })
   }
 

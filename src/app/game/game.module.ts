@@ -4,12 +4,14 @@ import { TextGenerationComponent } from './text-generation/text-generation.compo
 import { GamePageComponent } from './game-page/game-page.component';
 import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { KeyEventComponent } from './key-event/key-event.component';
 
 
 @NgModule({
   declarations: [
     TextGenerationComponent,
-    GamePageComponent
+    GamePageComponent,
+    KeyEventComponent
   ],
   imports: [
     CommonModule,
