@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PromiseService } from 'src/app/shared/service/promise.service';
 
 @Component({
   selector: 'app-text-generation',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TextGenerationComponent implements OnInit {
 
-  constructor() { }
+  constructor(public promise : PromiseService) { }
+
+  public loading: boolean = true;
+  public paragraph: any = ""; 
 
   ngOnInit(): void {
+    this.promise.getData().then(value => {
+      this.paragraph = value;
+      console.log(this.paragraph);
+      this.loading = false;
+    })
   }
 
 }
