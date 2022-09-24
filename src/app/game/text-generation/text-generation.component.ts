@@ -12,11 +12,14 @@ export class TextGenerationComponent implements OnInit {
 
   public loading: boolean = true;
   public paragraph: any = ""; 
+  public wordNumber : number = 0;
+  public letterNumber : number = 0;
 
   ngOnInit(): void {
     this.promise.getData().then(value => {
       this.paragraph = value;
-      console.log(this.paragraph);
+      this.wordNumber = this.paragraph[0].body.split(' ').length;
+      this.letterNumber = this.paragraph[0].body.split('').length;
       this.loading = false; 
     })
   }
