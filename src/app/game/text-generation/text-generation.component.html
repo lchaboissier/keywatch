@@ -1,6 +1,14 @@
 <div *ngIf="!loading" style="">
-  <span *ngFor="let word of paragraph[0].body.split(' ')">
+  <span *ngFor="let word of text[0].body.split(' ')">
     <span *ngFor="let letter of word.split('')">{{letter}}</span>
     <span>␣</span>
+  </span>
+</div>
+
+<div *ngIf="!loading" style="" >
+  <span *ngFor="let line of lines" class="line">
+    <span *ngFor="let word of line" class="word">
+      <span *ngFor="let letter of word.split('')" class="letter">{{letter}}</span>
+    </span>
   </span>
 </div>
