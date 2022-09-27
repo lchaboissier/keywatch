@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
-import { GameComponent } from './game/game.component';
+import { GamePageComponent } from './game/game-page/game-page.component';
+import { GameModule } from './game/game.module';
 
 const routes: Routes = [
   {
@@ -10,12 +11,13 @@ const routes: Routes = [
   },
   {
     path: "game",
-    component: GameComponent
+    component: GamePageComponent
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),
+            GameModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

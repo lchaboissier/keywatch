@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { GameComponent } from './game/game.component';
 import { HeaderComponent } from './shared/component/navigation/header/header.component';
 
 import { MatTabsModule } from '@angular/material/tabs';
@@ -16,10 +15,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SidenavListComponent } from './shared/component/navigation/sidenav-list/sidenav-list.component';
 import { MatListModule } from '@angular/material/list';
+import { AccueilComponent } from './accueil/accueil.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    GameComponent,
+    AccueilComponent,
     HeaderComponent,
     SidenavListComponent,
   ],
@@ -44,7 +46,9 @@ import { MatListModule } from '@angular/material/list';
     FlexLayoutModule,
     MatListModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
