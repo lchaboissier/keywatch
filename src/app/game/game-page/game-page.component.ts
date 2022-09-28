@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamePageComponent implements OnInit {
 
+  public data: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getKeypress(key: string)
+  {
+    this.data = key;
   }
 
 }

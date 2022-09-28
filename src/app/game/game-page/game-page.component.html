@@ -1,2 +1,2 @@
-<app-text-generation></app-text-generation>
-<app-key-event></app-key-event>
+<app-text-generation [typedKey]="data"></app-text-generation>
+<app-key-event (keyPress)="getKeypress($event)"></app-key-event>

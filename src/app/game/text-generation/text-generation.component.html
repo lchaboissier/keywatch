@@ -1,10 +1,22 @@
 <div *ngIf="!loading" class="text">
   <div>
-    <span class="cursor"></span>
+    <span class="cursor"
+    [ngStyle]="{
+      'margin-top.px': marginTop,
+      'margin-left.px': marginLeft
+    }"
+    ></span>
   </div>
-  <span *ngFor="let line of lines" class="line">
-    <span *ngFor="let word of line; let last = last" class="word">
-      <span *ngFor="let letter of word.split('')" class="letter">{{letter}}</span>
+  <span *ngFor="let line of lines; let lineIndex = index" class="line">
+    <span *ngFor="let word of line; let wordIndex = index ; let last = last" class="word">
+      <span 
+      *ngFor="let letter of word.split(''); let letterIndex = index"
+      [ngClass] = "{
+        'vld': (lineIndex <= activeLineNumber && wordIndex <= activeWordNumber && letterIndex < activeLetterNumber) || (lineIndex <= activeLineNumber && wordIndex < activeWordNumber) || (lineIndex < activeLineNumber),
+        'fls': (lineIndex == activeLineNumber && wordIndex == activeWordNumber && letterIndex == activeLetterNumber && typingError)
+      }"
+      
+      class="letter">{{letter}}</span>
       <span *ngIf="!last" class="space">&nbsp;</span>
     </span>
   </span>

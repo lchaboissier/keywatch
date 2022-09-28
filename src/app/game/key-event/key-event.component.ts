@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { HostListener } from '@angular/core';
+
+import { LocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'app-key-event',
@@ -10,15 +12,21 @@ export class KeyEventComponent implements OnInit {
 
   public key : any;
 
-  constructor() { }
+  @Output() keyPress = new EventEmitter();
+
+  constructor(private location: LocationStrategy) {
+    history.pushState(null, '', window.location.href);  
+    this.location.onPopState(() => {
+      history.pushState(null, '', window.location.href);
+    });
+  }
 
   ngOnInit(): void {
   }
 
   @HostListener('document:keypress', ['$event'])
-  handleKeyboardEvent(event: KeyboardEvent) { 
-    this.key = event.key;
-    console.log(this.key);
+  handleKeyboardEvent(event: KeyboardEvent) {
+    this.keyPress.emit(event);
   }
 
-}
+  }
