@@ -1,0 +1,15 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column['column']">
+    <th class="text-center" mat-header-cell *matHeaderCellDef> {{column['titre']}} </th>
+    <td mat-cell (click)="getLine(element)" *matCellDef="let element"> {{element[column['value']]}}</td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="showColumn"></tr>
+  <tr mat-row *matRowDef="let row; columns: showColumn;"></tr>
+</table>

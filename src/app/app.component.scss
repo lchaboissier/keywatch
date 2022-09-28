@@ -24,6 +24,11 @@ html {
   //   align-items: center;
   // }
 
+.app-flex {
+  display: flex;
+  flex-direction: column;
+}
+
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
     .card-container > *:not(.circle-link) ,

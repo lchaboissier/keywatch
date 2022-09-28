@@ -72,12 +72,12 @@ section {
 }
 
 .section-accueil-4 {
-    height: 50vh;
-    
+    height: 30vh;
     margin: 0 auto;
     background: rgb(218,76,66);
     background: linear-gradient(0deg, rgba(218,76,66,1) 0%, rgba(255,0,0,0.6082808123249299) 100%);
     background-size: cover;
+    padding: 120px 0;
 }
 
 // .section-accueil-4 {
@@ -121,4 +121,9 @@ section {
 
 button {
     margin-bottom: 2rem;
+}
+
+.button-warn:hover {
+    background-color: white;
+    color: #f44336;
 }

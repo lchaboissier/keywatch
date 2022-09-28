@@ -16,14 +16,25 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SidenavListComponent } from './shared/component/navigation/sidenav-list/sidenav-list.component';
 import { MatListModule } from '@angular/material/list';
 import { AccueilComponent } from './accueil/accueil.component';
-
+import { FooterComponent } from './shared/component/navigation/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ModelScore } from './shared/model/score/model-score';
+import { ScoreboardComponent } from './scoreboard/scoreboard.component';
+import { SharedModule } from './shared/shared.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { AddPlayerComponent } from './scoreboard/add-player/add-player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
     HeaderComponent,
+    ScoreboardComponent,
+    AddPlayerComponent,
     SidenavListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +46,15 @@ import { AccueilComponent } from './accueil/accueil.component';
     MatButtonModule,
     MatIconModule,
     FlexLayoutModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule,
+    SharedModule,
+    MatFormFieldModule,
+    MatListModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatListModule,
+    MatInputModule,
   ],
   exports: [
     MatTabsModule,
@@ -47,7 +66,7 @@ import { AccueilComponent } from './accueil/accueil.component';
     MatListModule
   ],
   providers: [
-
+    ModelScore
   ],
   bootstrap: [AppComponent]
 })
