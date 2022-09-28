@@ -1,19 +1,19 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="warn">
     <div fxHide.gt-xs>
         <button mat-icon-button (click)="onToggleSidenav()">
             <mat-icon>menu</mat-icon>
         </button>
     </div>
     <div>
-        <a routerLink="/">Accueil</a>
+        <span class="a-class">Keywatch</span>
     </div>
-    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+    <div fxFlex fxLayout fxLayoutAlign="start" fxHide.xs>
+        <ul fxLayout fxLayoutGap="20px" class="navigation-items">
             <li>
-                <a routerLink="/">Test</a>
+                <a (click)="navigation('/')">Accueil</a>
             </li>
             <li>
-                <a routerLink="/">Test</a>
+                <a (click)="navigation('game')">Jeu</a>
             </li>
         </ul>
     </div>
