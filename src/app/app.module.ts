@@ -26,6 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { AddPlayerComponent } from './scoreboard/add-player/add-player.component';
 import { AboutComponent } from './about/about.component';
+import { GameModule } from './game/game.module';
+import { CapitalPipe } from './shared/pipe/capital.pipe';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,7 @@ import { AboutComponent } from './about/about.component';
     MatFormFieldModule,
     MatListModule,
     MatInputModule,
+    GameModule
   ],
   exports: [
     MatTabsModule,
@@ -68,7 +71,8 @@ import { AboutComponent } from './about/about.component';
     MatListModule
   ],
   providers: [
-    ModelScore
+    ModelScore,
+    CapitalPipe
   ],
   bootstrap: [AppComponent]
 })

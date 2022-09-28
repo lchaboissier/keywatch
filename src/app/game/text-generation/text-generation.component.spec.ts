@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GameComponent } from './game.component';
+import { TextGenerationComponent } from './text-generation.component';
 
-describe('GameComponent', () => {
-  let component: GameComponent;
-  let fixture: ComponentFixture<GameComponent>;
+describe('TextGenerationComponent', () => {
+  let component: TextGenerationComponent;
+  let fixture: ComponentFixture<TextGenerationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GameComponent ]
+      declarations: [ TextGenerationComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GameComponent);
+    fixture = TestBed.createComponent(TextGenerationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  env_url: "https://jsonplaceholder.typicode.com/"
+  env_url: "https://jsonplaceholder.typicode.com/comments"
 };
 
 /*
