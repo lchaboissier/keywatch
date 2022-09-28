@@ -13,6 +13,12 @@ export class TextGenerationComponent implements OnInit {
 
   @Input() typedKey: any = '';
 
+  
+  getRandomInt(min: number, max: number) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
   public loading: boolean = true;
   public initialized: boolean = false;
 
@@ -48,8 +54,9 @@ export class TextGenerationComponent implements OnInit {
   ngOnInit(): void {
     this.promise.getData().then(value => {
       this.text = value;
-      this.letters = this.text[0].body.split('');
-      this.words = this.text[0].body.replaceAll(/\n/g, ' ').split(' ');
+      this.text = this.text[this.getRandomInt(0, this.text.length)].body;
+      this.letters = this.text.split('');
+      this.words = this.text.replaceAll(/\n/g, ' ').split(' ');
       this.wordNumber = this.words.length;
       this.wordlength = this.wordlength.map((word: string, index: number) => this.wordNumber - 1 == index ? word.length : word.length + 1);
       this.words.map((word: string) => {
