@@ -5,7 +5,7 @@
 
   <!-- Position Column -->
   <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column['column']">
-    <th class="text-center" mat-header-cell *matHeaderCellDef> {{column['titre']}} </th>
+    <th class="text-align-table" mat-header-cell *matHeaderCellDef> {{column['titre']}} </th>
     <td mat-cell (click)="getLine(element)" *matCellDef="let element"> {{element[column['value']]}}</td>
   </ng-container>
 

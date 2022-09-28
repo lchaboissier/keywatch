@@ -11,11 +11,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatListModule } from '@angular/material/list';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { BoldPipe } from './pipe/bold.pipe';
 
 
 @NgModule({
   declarations: [
-    TableComponent
+    TableComponent,
+    BoldPipe
   ],
   imports: [
     CommonModule,

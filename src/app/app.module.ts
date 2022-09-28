@@ -25,6 +25,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { AddPlayerComponent } from './scoreboard/add-player/add-player.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AddPlayerComponent } from './scoreboard/add-player/add-player.component
     ScoreboardComponent,
     AddPlayerComponent,
     SidenavListComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
