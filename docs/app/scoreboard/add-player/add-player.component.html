@@ -1,0 +1,38 @@
+<div class="form-addplayer-flex">
+  <button mat-raised-button type="button" class="back-button-form button-warn" color="warn" (click)="previousPage()"><mat-icon>chevron_left</mat-icon>Retour en arrière</button>
+  <h1>Ajouter un joueur</h1>
+  <form class="form" [formGroup]="registerForm" (ngSubmit)="submit()">
+    <div class="row"  *ngIf="showMsg">
+      <div class="col-xs-12">
+        <p class="success-msg">
+          <mat-icon>done</mat-icon>Le joueur a bien été ajouté !
+        </p>
+      </div>
+    </div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Nom</mat-label>
+        <input matInput formControlName="nom">
+        <mat-error></mat-error>
+      </mat-form-field>
+    
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Prénom</mat-label>
+        <input matInput formControlName="prenom">
+        <mat-error></mat-error>
+      </mat-form-field>
+    
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Vitesse</mat-label>
+        <input matInput formControlName="vitesse">
+        <mat-error></mat-error>
+      </mat-form-field>
+    
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Temps</mat-label>
+        <input matInput formControlName="temps">
+        <mat-error></mat-error>
+      </mat-form-field>
+    
+      <button mat-raised-button type="submit" class="submit-button-form button-warn" color="warn" (click)="submit()">Valider</button>
+    </form>
+</div>

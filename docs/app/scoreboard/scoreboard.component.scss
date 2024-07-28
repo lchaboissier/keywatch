@@ -1,0 +1,17 @@
+.scoreboard-flex {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh;
+    margin: 0 5vh;
+}
+
+.button-scoreboard {
+    margin-bottom: 2rem;
+}
+
+.button-warn:hover {
+    background-color: white;
+    color: #f44336;
+}
