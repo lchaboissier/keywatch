@@ -1,9 +1,0 @@
-<div class="scoreboard-flex">
-    <h1>Statistiques des joueurs</h1>
-    <button mat-raised-button color="warn" class="button-warn" type="button" (click)="navigation('score/addPlayer')"><mat-icon>add</mat-icon> Ajouter un joueur</button>
-    <app-table *ngIf="!loading" 
-               [dataSource]="dataSource" 
-               [displayedColumns]="displayedColumns"
-               (lineObject)="getLine($event)">
-    </app-table>
-</div>
